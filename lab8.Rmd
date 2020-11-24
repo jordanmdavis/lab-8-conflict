@@ -13,26 +13,9 @@ library(tidyverse)
 ```{r}
 ggplot(data = storms, aes(x = pressure, y = wind)) +
   geom_hex() +
-<<<<<<< HEAD
-  scale_fill_gradient(low = "blue", high = "yellow")
-=======
-  scale_fill_gradient(low = "black", high = "magenta")
->>>>>>> a37437022565c45ee9af7468e375e9e547f34a09
+  scale_fill_gradient(low = "black", high = "magenta") +
+  theme_minimal()
 ```
 
 
 
-Save, stage, commit, and PULL … did you successfully break it? You should see a message about a merge conflict! That’s because you have stored your color scheme, and git doesn’t want to assume you want to overwrite that with your partner’s color scheme that it would be pulling in. Yay, a conflict! How do we fix it? 
-Look at the .Rmd. The different versions of the code creating the conflict will be bounded by “gates”, and separated in the middle by ===========, kind of like this: 
-
-<<<<<<<<<<<<<<<<< HEAD (this is the start of the conflict)
-some_code()
-===================
-some_conflicting_code()
->>>>>>>>>>>>>>>>> some/really/long/thing (end of the conflict)
-
-
-Delete all of that except for the code you want to keep (in this case, the ggplot with the black to magenta color gradient
-Save, stage, commit, pull and push. Ta-da! 
-Now add one more update - update the theme to theme_minimal()
-Save, stage, commit, pull, and push
