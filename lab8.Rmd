@@ -1,0 +1,25 @@
+---
+title: "week8"
+author: "Jordan Marisa Davis"
+date: "11/24/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r}
+ggplot(data = storms, aes(x = pressure, y = wind)) +
+  geom_hex()
+```
+
+
+
+
+Save the .Rmd (don’t knit)
+Stage, commit, pull, then push changes
+Add your partner as a collaborator in the repo (Settings > Manage access > Invite) 
+Tell your partner when the invitation has been sent
+Don’t touch anything - wait for instruction 
